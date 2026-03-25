@@ -1,0 +1,211 @@
+/* global settings */
+*
+{
+margin:0;
+padding: 0;
+box-sizing: border-box;
+}
+:root
+{
+--gap1:10px;    
+}
+.flex
+{
+display: flex;
+gap:var(--gap1);
+}
+
+/* end global settings */
+
+.body
+{
+height: 100vh;
+background-color: aliceblue;
+}
+
+.wrapper
+{
+width: 100%;
+max-width:900px;
+justify-content: space-between;
+align-items: center;
+padding: 5px 0px;
+flex-direction: column;
+margin:auto;
+background-color: white;
+border-radius: 10px;
+overflow-y: auto;
+}
+
+/* heading */
+.title
+{
+    font-size: 30px;
+    font-weight: 800;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.4;
+    position: relative;
+}
+.title::before
+{
+content: '';
+position: absolute;
+width: 80%;
+height: 5px;
+
+background-color: #0b0e2d;
+border-radius: 10px;
+bottom: -10px;
+left: 50%;
+transform: translateX(-50%);
+}
+/* end  */
+/* buttons Generator */
+.generate {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ff7576;
+  background-color: #0b0e2d;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 24px;
+  position: relative;
+  line-height: 24px;
+  border-radius: 9px;
+  box-shadow: 0px 1px 2px #2B3044,
+    0px 4px 16px #2B3044;
+}
+
+.sp {
+  background: linear-gradient(
+      90deg,
+      #866ee7,
+      #ea60da,
+      #ed8f57,
+      #fbd41d,
+      #2cca91
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+display: block;
+  
+}
+
+.generate:hover {
+  transition: 1s;
+  transform: scale(0.93);
+}
+
+.generate
+{
+   margin:20px  auto 20px 20px ;  
+  }
+/* end  */
+
+/* Colors */
+.colors
+{
+    display: grid;                        /* تفعيل grid */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* أعمدة مرنة حسب مساحة */
+    gap: 16px;                             /* مسافة بين العناصر */
+    width: 100%;
+
+    padding: 10px;
+    border-radius: 10px; 
+}
+
+.colors .item
+{
+    flex-direction: column;    /* color فوق + details تحت */
+    align-items: center;       /* توسيط كل شيء داخل الكارد */
+    min-width: 150px;          /* حجم ثابت تقريبا لكل كارد */
+    background-color: #fff;    /* card background */
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+gap:20px;
+}
+
+.item
+{
+transition: transform .5s ease-in;
+}
+.item:hover
+{
+transform: translateY(10px);
+}
+.item .itemColor
+{
+width:  100px;
+height: 100px;
+background-color: rgb(81, 91, 91);
+border-radius: 10px;
+}
+.item .itemDetials
+{
+ width: 100%;
+ max-width: 200px;
+    justify-content: space-between; /* المسافة بين النص و الزر */
+    align-items: center;           /* توسيط عمودي لكل شيء */
+    padding-top: 5px;                               /*               مسافة صغيرة فوق */
+    gap: 10px;   
+}
+/* end */
+
+/* button Copy  */
+.Btn {
+  display: flex;                /* 🔹 مهم: يخلي الأيقونة والنص صف واحد */
+  align-items: center;          /* 🔹 يوسّط العناصر عمودياً */
+  justify-content: center;      /* 🔹 يوسّط العناصر أفقياً */
+  gap: 8px;                     /* 🔹 مسافة بين الأيقونة والنص */
+  
+  width: 100%;
+  max-width: 80px;
+  height: 35px;
+
+  border: none;
+  border-radius: 6px;           /* 🔹 مدوّر أكثر شوي UI حديث */
+  overflow: hidden;
+
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); /* 🔹 أخف الظل */
+  cursor: pointer;
+
+  background-color: rgb(81, 46, 219); /* 🔹 لون زر حديث */
+  color: white;                        /* 🔹 النص يكون واضح */
+  font-weight: 500;
+  font-size: 0.9rem;
+
+  transition: background 0.2s ease-in-out;    /* 🔹 حركة smooth عند hover */
+}
+
+
+.svgIcon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.Btn .svgIcon svg {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+.Btn:hover .svgIcon {
+  background-color: rgb(0, 105, 105);
+}
+/* end  */
+
+@media screen and (max-width:767px) 
+{
+.generate
+{
+margin:30px auto;
+}  
+}
